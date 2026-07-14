@@ -16,15 +16,3 @@ Recommended first settings:
 - Stop after this many seconds: 240
 
 The app now starts from a working timetable and only replaces it if an improved working timetable is found.
-
-
-## Login protection
-
-This app has a simple username/password gate. For Streamlit Community Cloud, do not commit real secrets to GitHub. Add them in Streamlit Cloud under App settings → Secrets:
-
-```toml
-APP_USERNAME = "fdodds"
-APP_PASSWORD = "EBHS"
-```
-
-If these secrets are not set, the app will stop at a setup message.
