@@ -1,0 +1,56 @@
+{
+  "name": "Small sample project",
+  "periods": [
+    {"Period": "Form", "Label": "Form", "Start": "09:05", "End": "09:35", "Type": "Form", "Teaching": false},
+    {"Period": "P1", "Label": "Period 1", "Start": "09:35", "End": "10:35", "Type": "Teaching", "Teaching": true},
+    {"Period": "P2", "Label": "Period 2", "Start": "10:35", "End": "11:35", "Type": "Teaching", "Teaching": true},
+    {"Period": "P3", "Label": "Period 3", "Start": "11:55", "End": "12:55", "Type": "Teaching", "Teaching": true},
+    {"Period": "P4", "Label": "Period 4", "Start": "12:55", "End": "13:55", "Type": "Teaching", "Teaching": true},
+    {"Period": "P5", "Label": "Period 5", "Start": "14:35", "End": "15:35", "Type": "Teaching", "Teaching": true}
+  ],
+  "teachers": [
+    {"Teacher": "Fraser", "Code": "FDO", "Subjects": "Maths", "TargetLessons": 8, "MaxLessons": 10},
+    {"Teacher": "Phil", "Code": "PE", "Subjects": "Maths", "TargetLessons": 8, "MaxLessons": 10},
+    {"Teacher": "Annette", "Code": "AD", "Subjects": "Maths", "TargetLessons": 7, "MaxLessons": 9}
+  ],
+  "classes": [
+    {"ClassID": "10X/Ma1", "Subject": "Maths", "Year": 10, "Side": "X", "LessonsRequired": 4, "MaxTeachers": 1},
+    {"ClassID": "7Y/Ma1", "Subject": "Maths", "Year": 7, "Side": "Y", "LessonsRequired": 4, "MaxTeachers": 2},
+    {"ClassID": "8X/Ma1", "Subject": "Maths", "Year": 8, "Side": "X", "LessonsRequired": 3, "MaxTeachers": 2}
+  ],
+  "blocks": [
+    {"BlockID": "10X Maths", "Subject": "Maths", "Classes": "10X/Ma1"},
+    {"BlockID": "7Y Maths", "Subject": "Maths", "Classes": "7Y/Ma1"},
+    {"BlockID": "8X Maths", "Subject": "Maths", "Classes": "8X/Ma1"}
+  ],
+  "slot_options": [
+    {"SlotOptionID": "10X + 7Y", "Blocks": "10X Maths, 7Y Maths", "Description": "10X and 7Y at the same time"},
+    {"SlotOptionID": "8X", "Blocks": "8X Maths", "Description": "8X only"},
+    {"SlotOptionID": "10X", "Blocks": "10X Maths", "Description": "10X only"}
+  ],
+  "block_slots": [
+    {"Week": "A", "Day": "Monday", "Period": "P1", "SlotOptionID": "10X + 7Y"},
+    {"Week": "A", "Day": "Tuesday", "Period": "P2", "SlotOptionID": "10X"},
+    {"Week": "A", "Day": "Tuesday", "Period": "P1", "SlotOptionID": "8X"},
+    {"Week": "B", "Day": "Monday", "Period": "P1", "SlotOptionID": "10X + 7Y"},
+    {"Week": "B", "Day": "Wednesday", "Period": "P5", "SlotOptionID": "8X"}
+  ],
+  "class_current_defaults": [
+    {"ClassID": "10X/Ma1", "CurrentTeacher": "Fraser"},
+    {"ClassID": "7Y/Ma1", "CurrentTeacher": "Phil"},
+    {"ClassID": "8X/Ma1", "CurrentTeacher": "Annette"}
+  ],
+  "lesson_overrides": [],
+  "lessons": [],
+  "teacher_rules": [
+    {"ClassID": "10X/Ma1", "Teacher": "Fraser", "Rule": "must", "ExactLessons": "", "Penalty": 0}
+  ],
+  "non_teaching": [
+    {"Teacher": "Annette", "Week": "B", "Day": "Wednesday", "Period": "P1", "Reason": "Part time"},
+    {"Teacher": "Annette", "Week": "B", "Day": "Wednesday", "Period": "P2", "Reason": "Part time"},
+    {"Teacher": "Annette", "Week": "B", "Day": "Wednesday", "Period": "P3", "Reason": "Part time"},
+    {"Teacher": "Annette", "Week": "B", "Day": "Wednesday", "Period": "P4", "Reason": "Part time"},
+    {"Teacher": "Annette", "Week": "B", "Day": "Wednesday", "Period": "P5", "Reason": "Part time"}
+  ],
+  "settings": {"reduce_splits_priority": "Very high", "welfare_priority": "Medium", "try_three_teacher_relaxation": true}
+}
